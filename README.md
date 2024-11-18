@@ -67,5 +67,4 @@ Sending palma2.bin 100% ok, starting... ok, waiting for Firehose... ok
 * You're running rooted! 🎉
 * You can double check by opening Magisk again. One thing I would recommend is to go into the Magisk settings and block anything work or bank related from being able to see that you're rooted.
 
-Enjoy!
-* 
+Enjoy! 
