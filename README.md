@@ -1,5 +1,7 @@
 **INITIAL DISCLAIMER: screwing this up could brick your device, do not attempt unless you thoroughly understand what is happening and why, please read all instructions top to bottom first so you know what to expect**
 
+**CREDITS AND THANKS: huge thanks to Renate from MobileRead.com for the resources here I used to create this guide: https://www.temblast.com/edl.htm**
+
 OK. On with the show ;)
 
 # What Is Rooting?
