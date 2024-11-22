@@ -67,7 +67,7 @@ Sending palma2.bin 100% ok, starting... ok, waiting for Firehose... ok
 * You installed Magisk from Github as shown above already, right? Great! Open Magisk and click the "Install" button in the upper right. Pick "select and patch a file." You will do this twice, once for boota.img and once for bootb.img. Each time it will produce a new .img boot partition file ending with a random set of characters. Make sure you keep track of which one is which, because again, I have no idea if it matters for Boox! You should probably rename them to something like `magisk-boota.img` and `magisk-bootb.img."
 * Assuming you did that, do an `adb pull` of the new Magisk files back to your computer.
 * Back to EDL mode. `adb reboot edl`.
-* Now we push the modified boot images back on to your Palma 2's storage in the right places. `.\edl /u /w /pboota magisk-boota.img` and `.\edl /u /w /pbootb magisk-bootb.img`, followed by `.\edl /z` to reboot back to Android again.
+* Now we push the modified boot images back on to your Palma 2's storage in the right places. `.\edl /u /w /pboot_a magisk-boota.img` and `.\edl /u /w /pboot_b magisk-bootb.img`, followed by `.\edl /z` to reboot back to Android again.
 * You're running rooted! 🎉
 * You can double check by opening Magisk again. One thing I would recommend is to go into the Magisk settings and block anything work or bank related from being able to see that you're rooted.
 
