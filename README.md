@@ -68,15 +68,15 @@ Sending palma2.bin 100% ok, starting... ok, waiting for Firehose... ok
 ```
 
 * Now try `.\edl /u /g` . You should see it print the partition table.
-* Pull the A slot boot partition from the device: `.\edl /u /r /pboot_a boota.img`
-* Same for the B slot: `.\edl /u /r /pboot_b bootb.img`
+* Pull the A slot boot partition from the device: `.\edl /u /r /pboot_a palma_boota_unrooted_4.0.img`
+* Same for the B slot: `.\edl /u /r /pboot_b palma_bootb_unrooted_4.0.img`
 * Modern Android devices have two "boot slots" they can use, which sort of gives you the ability to dual-boot various versions of the operating system. You don't need to worry about that specifically, but I have no idea if the boot partition slots are materially different from each other on Boox, so to be safe, we'll pull both partitions like we just did, modify both of them, and write them both to the device.
 * Reboot the device back to Android with `.\edl /z`
-* Use ADB to push both of the boot images to your device: `adb push boota.img /sdcard` and `adb push bootb.img /sdcard`.
-* You installed Magisk from Github as shown above already, right? Great! Open Magisk and click the "Install" button in the upper right. Pick "select and patch a file." You will do this twice, once for boota.img and once for bootb.img. Each time it will produce a new .img boot partition file ending with a random set of characters. Make sure you keep track of which one is which, because again, I have no idea if it matters for Boox! You should probably rename them to something like `magisk-boota.img` and `magisk-bootb.img."
+* Use ADB to push both of the boot images to your device: `adb push palma_boota_unrooted_4.0.img /sdcard` and `adb push palma_bootb_unrooted_4.0.img /sdcard`.
+* You installed Magisk from Github as shown above already, right? Great! Open Magisk and click the "Install" button in the upper right. Pick "select and patch a file." You will do this twice, once for boota.img and once for bootb.img. Each time it will produce a new .img boot partition file ending with a random set of characters. Make sure you keep track of which one is which, because again, I have no idea if it matters for Boox! You should probably rename them to something like `palma_magisk-boota.img` and `palma_magisk-bootb.img."
 * Assuming you did that, do an `adb pull` of the new Magisk files back to your computer.
 * Back to EDL mode. `adb reboot edl`.
-* Now we push the modified boot images back on to your device's storage in the right places. `.\edl /u /w /pboot_a magisk-boota.img` and `.\edl /u /w /pboot_b magisk-bootb.img`, followed by `.\edl /z` to reboot back to Android again.
+* Now we push the modified boot images back on to your device's storage in the right places. `.\edl /u /w /pboot_a palma_magisk-boota.img` and `.\edl /u /w /pboot_b palma_magisk-bootb.img`, followed by `.\edl /z` to reboot back to Android again.
 * You're running rooted! 🎉
 * You can double check by opening Magisk again. One thing I would recommend is to go into the Magisk settings and block anything work or bank related from being able to see that you're rooted.
 
