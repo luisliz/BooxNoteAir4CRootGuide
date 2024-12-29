@@ -14,6 +14,8 @@ Normally when using an Android or iOS device, you as the owner/user of the devic
 # Why Root Your Device?
 You may not need to at all! It really depends on what you're trying to do. On pen-enabled devices like the Note Air 4C, rooting lets you edit the /onyxconfig/eac_config file which controls ink optimization like Boox enabled for OneNote -- faster/no-lag writing in the app. On the Palma 2, a device which (sadly) has no EMR layer for use with a stylus, rooting still lets you do things like use Titanium Backup to back entire apps and their data up to any location, or run software like nmap with privileges required to do things like putting WiFi interfaces into promiscuous mode so you can gather more data. It's the sort of thing where if you know you need it, you know why you need it.
 
+**ETA 2024-12-29: take note: starting with firmware 4.0+ devices like the Note Air 4C, the above method of enabling handwriting/ink optimization no longer works the way it did because the config file has changed to something that appears not to be directly editable anymore. it is now in /onyxconfig/mmkv/onyx_config and seems to be partially binary, possibly using Tencent's MMKV format, although when I tried an MMKV CLI utility it was unable to read it. more as this story develops, etc. etc.**
+
 # K, How Does This Work?
 So, first, these instructions are for Windows. If you know how to do this on other operating systems, please let me know and if you like I'll add the contents of your guide to mine or simply link to yours.
 You will need the following:
