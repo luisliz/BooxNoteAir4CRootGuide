@@ -59,6 +59,7 @@ This step is a little fiddly. At first your device will probably not connect. Yo
 * Download and run Zadig (found above). Go to "Options" and pick "List All Devices." From the dropdown, look at your list of USB devices. You should see "Quectel QDLoader 9008." Select that. Click "install driver."
 * Download the loader file and EDL, from the list above. Notice that the loader file has a really long, complicated name. To make your life easier, rename it to something  like palma2.bin. On the command line, try `.\edl /lpalma2.bin` (yes, just like that -- assuming the edl.exe file is in your current directory and so is the palma2.bin file you renamed from the loader download -- the EDL program uses this weird command line switch format where you do not want a space between the l from /l and the name of the loader file.) You should see something like this:
 
+## **NOTE: first command is `/l` followed by name** it will not work until correct loader and give bad XML error
 ```
 PS C:\Users\jtd\Downloads> .\edl /lpalma2.bin
 Found EDL 9008, handshaking... nope, resetting... version 2.1
